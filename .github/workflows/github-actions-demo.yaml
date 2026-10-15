@@ -19,7 +19,7 @@ jobs:
         run: echo "Hello, world!"
   deploy:
     runs-on: ubuntu-latest
-    needs: build
+    #needs: build
     steps:
       - name: Deploy to aks
         run: echo "Deploying to AKS..."
