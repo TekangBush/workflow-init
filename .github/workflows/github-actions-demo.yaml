@@ -26,3 +26,12 @@ jobs:
         run: |
           echo "Deploying to AKS..."
           echo "Deploying to webapp."
+  QA:
+    needs: build
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Deploy to qa
+        run: |
+          echo "Deploying to QA..."
+          echo "Deploying to webapp."
