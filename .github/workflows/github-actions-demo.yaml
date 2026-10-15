@@ -23,4 +23,6 @@ jobs:
   
     steps:
       - name: Deploy to aks
-        run: echo "Deploying to AKS..."
+        run: |
+          echo "Deploying to AKS..."
+          echo "Deploying to webapp."
