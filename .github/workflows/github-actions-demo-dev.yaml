@@ -27,16 +27,18 @@ jobs:
   QA:
     needs: build
     runs-on: ubuntu-latest
-  
     steps:
       - name: Deploy to qa
         run: |
           echo "Deploying to QA..."
           echo "Deploying to webapp."
+      - name: Agent's env
+          run: |
+            env | sort
+
   HelloLouis:
     needs: QA
     runs-on: windows-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -44,3 +46,12 @@ jobs:
         shell: pwsh
         run: |
           .\dummy\helloLouis.ps1
+          env | sort
+          
+  macbook:
+    needs: build
+    runs-on: macos-latest
+    steps:
+      - name: env
+        run: |
+          env | sort
