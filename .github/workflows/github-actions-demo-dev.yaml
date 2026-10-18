@@ -48,7 +48,7 @@ jobs:
           env | sort
 
   macbook:
-    needs: build
+    needs: QA
     runs-on: macos-latest
     steps:
       - name: env
