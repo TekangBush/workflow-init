@@ -36,10 +36,11 @@ jobs:
   HelloLouis:
     needs: QA
     runs-on: windows-latest
-  
+
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
       - name: HelloLouis
         shell: pwsh
         run: |
-          **/dummy/helloLouis.ps1 
-          
+          .\dummy\helloLouis.ps1
