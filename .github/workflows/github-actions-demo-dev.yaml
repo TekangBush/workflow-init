@@ -54,3 +54,10 @@ jobs:
       - name: env
         run: |
           env | sort
+  jenkings:
+    needs: build
+    runs-on: macos-latest
+    steps:
+      - name: env
+        run: |
+          env | sort
