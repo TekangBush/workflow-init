@@ -55,7 +55,7 @@ jobs:
         run: |
           env | sort
   jenkings:
-    needs: build
+    needs: [build,macbook]
     runs-on: macos-latest
     steps:
       - name: env
