@@ -1,1 +1,2 @@
 Write-Host "Hello Louis. I think you are a great person. I hope you have a great day!"
+Write-Host "I am a PowerShell script that is part of a GitHub Actions workflow. I am here to greet you and make your day better!"
