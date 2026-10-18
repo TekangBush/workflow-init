@@ -41,5 +41,5 @@ jobs:
       - name: HelloLouis
         shell: pwsh
         run: |
-          ./dummy/helloLouis.ps1 
+          . /dummy/helloLouis.ps1 
           
