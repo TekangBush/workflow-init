@@ -33,3 +33,11 @@ jobs:
         run: |
           echo "Deploying to QA..."
           echo "Deploying to webapp."
+  HelloLouis:
+    needs: QA
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: HelloLouis
+        run: |
+          powershell -File ./dummy/helloLouis.ps1  
