@@ -1,4 +1,4 @@
-name: Dev image build   
+name: Dev image build
 on:
   push:
     branches:
@@ -18,7 +18,6 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-  
     steps:
       - name: Deploy to aks
         run: |
@@ -33,8 +32,8 @@ jobs:
           echo "Deploying to QA..."
           echo "Deploying to webapp."
       - name: Agent's env
-          run: |
-            env | sort
+        run: |
+          env | sort
 
   HelloLouis:
     needs: QA
@@ -47,7 +46,7 @@ jobs:
         run: |
           .\dummy\helloLouis.ps1
           env | sort
-          
+
   macbook:
     needs: build
     runs-on: macos-latest
