@@ -39,5 +39,7 @@ jobs:
   
     steps:
       - name: HelloLouis
+        shell: pwsh
         run: |
-          powershell -File ./dummy/helloLouis.ps1  
+          ./dummy/helloLouis.ps1 
+          
